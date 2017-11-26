@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version D.kotlinVersion apply false
+    kotlin("android") version D.kotlinVersion apply false
     kotlin("kapt") version D.kotlinVersion apply false
 }
 

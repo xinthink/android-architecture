@@ -1,3 +1,4 @@
+import org.gradle.api.JavaVersion
 import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.kotlin.dsl.kotlin
 
@@ -12,7 +13,8 @@ object D {
     val compileSdkVersion = 27
     val buildToolsVersion = "27.0.1"
 
-    // Kotlin
+    // Java/Kotlin/Anko
+    val javaVersion = JavaVersion.VERSION_1_7
     val kotlinVersion = "1.1.61"
     val kotlinStdlib = "stdlib-jre7"
 

@@ -24,6 +24,11 @@ android {
         }
     }
 
+    compileOptions {
+        setSourceCompatibility(D.javaVersion)
+        setTargetCompatibility(D.javaVersion)
+    }
+
     buildTypes {
         getByName("debug") {
             isMinifyEnabled = true
@@ -74,45 +79,45 @@ android {
  */
 dependencies {
     // App"s dependencies, including test
-    compile(D.support.appcompat)
-    compile(D.support.cardview)
-    compile(D.support.design)
-    compile(D.support.recyclerview)
-    compile(D.support.v4)
-    compile(D.espresso.idlingRes)
-    compile(D.guava)
-    compile(D.arch.room.runtime)
+    implementation(D.support.appcompat)
+    implementation(D.support.cardview)
+    implementation(D.support.design)
+    implementation(D.support.recyclerview)
+    implementation(D.support.v4)
+    implementation(D.espresso.idlingRes)
+    implementation(D.guava)
+    implementation(D.arch.room.runtime)
 
     kapt(D.arch.compiler)
     kapt(D.arch.room.compiler)
 
     // Dependencies for local unit tests
-    testCompile(D.junit)
-    testCompile(D.mockito.all)
-    testCompile(D.hamcrest)
+    testImplementation(D.junit)
+    testImplementation(D.mockito.all)
+    testImplementation(D.hamcrest)
 
     // Android Testing Support Library"s runner and rules
-    androidTestCompile(D.supportTest.runner)
-    androidTestCompile(D.supportTest.rules)
+    androidTestImplementation(D.supportTest.runner)
+    androidTestImplementation(D.supportTest.rules)
 
-    androidTestCompile(D.archTest.room)
+    androidTestImplementation(D.archTest.room)
 
     // Dependencies for Android unit tests
-    androidTestCompile(D.junit)
-    androidTestCompile(D.mockito.core)
-    androidTestCompile(D.dexmaker.core)
-    androidTestCompile(D.dexmaker.mockito)
+    androidTestImplementation(D.junit)
+    androidTestImplementation(D.mockito.core)
+    androidTestImplementation(D.dexmaker.core)
+    androidTestImplementation(D.dexmaker.mockito)
 
     // Espresso UI Testing
-    androidTestCompile(D.espresso.core)
-    androidTestCompile(D.espresso.contrib)
-    androidTestCompile(D.espresso.intents)
-    androidTestCompile(D.espresso.idlingConcurrent)
+    androidTestImplementation(D.espresso.core)
+    androidTestImplementation(D.espresso.contrib)
+    androidTestImplementation(D.espresso.intents)
+    androidTestImplementation(D.espresso.idlingConcurrent)
 
     // Resolve conflicts between main and test APK:
-    androidTestCompile(D.support.annotations)
-    androidTestCompile(D.support.v4)
-    androidTestCompile(D.support.recyclerview)
-    androidTestCompile(D.support.appcompat)
-    androidTestCompile(D.support.design)
+    androidTestImplementation(D.support.annotations)
+    androidTestImplementation(D.support.v4)
+    androidTestImplementation(D.support.recyclerview)
+    androidTestImplementation(D.support.appcompat)
+    androidTestImplementation(D.support.design)
 }
